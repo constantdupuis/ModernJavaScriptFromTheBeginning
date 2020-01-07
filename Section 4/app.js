@@ -30,9 +30,10 @@ function addTask(e)
   li.appendChild( document.createTextNode(taskInput.value) );
   // create new link element
   const link = document.createElement('a');
+  link.href = "#";
   link.className = 'delete-item secondary-content';
   // Add icon HTML
-  link.innerHTML = '<a href="#"><i class="material-icons black-text">delete</i></a>';
+  link.innerHTML = '<i class="material-icons black-text">delete</i>';
   li.appendChild(link);
   // append li to ul
   tasklist.appendChild(li);
