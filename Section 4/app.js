@@ -17,6 +17,8 @@ function loadEventListeners()
   tasklist.addEventListener('click', removeTask);
   // clear tasks event
   clearBtn.addEventListener('click', clearTasks)
+  // filter task event
+  filter.addEventListener('keyup', filterTasks)
 }
 
 function addTask(e)
@@ -72,5 +74,12 @@ function clearTasks(e)
   }
 }
 
-let val = taskInput;
-console.log(val);
+function filterTasks(e)
+{
+  const text = e.target.value.toLowerCase();
+  
+  document.querySelectorAll('.collection-item').forEach(function(ci,idx){
+    console.log(ci.firstChild.textContent);
+  });
+  
+}
