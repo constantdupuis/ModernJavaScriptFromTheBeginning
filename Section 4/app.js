@@ -63,8 +63,13 @@ function removeTask(e)
 
 function clearTasks(e)
 {
-  let childs = tasklist.children();
-
+  //tasklist.innerHTML = '';
+  
+  // faster
+  while( tasklist.firstChild)
+  {
+    tasklist.removeChild( tasklist.firstChild );
+  }
 }
 
 let val = taskInput;
